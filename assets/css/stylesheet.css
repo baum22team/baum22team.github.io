@@ -3,17 +3,31 @@
     font-size: 40px;
     top: 25px;
     right: 25px;
+    z-index: 11;
+    cursor: pointer;
 }
 
 #menuContainer {
-    display: none;
     position: absolute;
     top: 0px;
     left: 0px;
     height: 100vh;
     width: 100vw;
     z-index: 10;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
+}
+
+.displayNone {
+    /* display: none; */
+    animation-name: menuLeave;
+    animation-duration: 0.5s;
+    opacity: 0;
+}
+
+.displayBlock {
+    display: block;
+    animation-name: menuEnter;
+    animation-duration: 0.5s;
 }
 
 #menuContainer h1 {
@@ -27,6 +41,7 @@
     margin: auto;
     max-width: 800px;
     padding-top: 70px;
+    cursor: pointer;
 }
 
 #menuItems p, #menuItems a {
@@ -35,6 +50,9 @@
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
+    color: black;
+    font-weight: 100;
+    text-decoration: none;
 }
 
 
@@ -44,4 +62,19 @@
     -moz-user-select: none;    
     -ms-user-select: none;      
     user-select: none;
+  }
+
+  body.preload *{
+    animation-duration: 0s !important;
+    -webkit-animation-duration: 0s !important;
+    transition:background-color 0s, opacity 0s, color 0s, width 0s, height 0s, padding 0s, margin 0s !important;}
+
+  @keyframes menuLeave {
+    from {opacity: 1;}
+    to {opacity: 0;}
+  }
+
+  @keyframes menuEnter {
+    from {opacity: 0;}
+    to {opacity: 1;}
   }
