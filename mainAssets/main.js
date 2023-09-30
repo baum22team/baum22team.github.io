@@ -1,4 +1,4 @@
 $(function(){
-    $("header").load("header.html"); 
-    $("footer").load("footer.html"); 
+    $("header").load("https://baum22team.githun.io/mainAssets/header.html"); 
+    $("footer").load("https://baum22team.githun.io/mainAssets/footer.html"); 
 });
