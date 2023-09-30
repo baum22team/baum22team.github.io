@@ -5,5 +5,10 @@
 </div>
 <script>
     document.getElementById("heading").innerHTML =  document.getElementsByTagName("header")[0].getAttribute('heading');
-    document.getElementById("caption").innerHTML =  document.getElementsByTagName("header")[0].getAttribute('caption');
+    if (document.getElementsByTagName("header")[0].getAttribute('warning') == null) {
+        document.getElementById("caption").innerHTML =  document.getElementsByTagName("header")[0].getAttribute('caption')
+    }
+    else {
+        document.getElementById("caption").innerHTML =  document.getElementsByTagName("header")[0].getAttribute('caption') + " | <p style=\"display: inline; color: #bb0000\">" + document.getElementsByTagName("header")[0].getAttribute('warning') + "</p>";
+    }
 </script>
