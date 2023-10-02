@@ -16,7 +16,7 @@ Add the footer tag at the bottom of the `<body>`.
 ```html
 <footer></footer>
 ```
-### `main.js`
+### main.js
 Add the `<script>` at the very bottom of the `<body>` tag. 
 ```html
 <script src="https://baum22team.github.io/mainAssets/main.js"></script>
